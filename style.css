@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(batu.png);
+    background-image: url(img/batu.png);
     margin: 0px;
     padding: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -180,7 +180,6 @@ p {
     width: 50px;
     border-radius: 50%;
 }
-
 
 
 /* crud */
