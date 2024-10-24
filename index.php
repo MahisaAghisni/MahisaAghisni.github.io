@@ -1,5 +1,5 @@
-<?php 
-    include "cek_koneksi.php";
+<?php
+include "cek_koneksi.php";
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +49,8 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="formLogin.html">Admin</a> </div>
+                <a class="dropdown-item" href="formLogin.html">Admin</a>
+            </div>
         </div>
     </nav>
 
@@ -85,8 +86,8 @@
                 </p>
                 <script src="jquery-3.6.0.js"></script>
                 <script>
-                    $(document).ready(function () {
-                        $("#flip").click(function () {
+                    $(document).ready(function() {
+                        $("#flip").click(function() {
                             $("#kotak2").slideToggle("slow")
                         });
                     });
@@ -108,7 +109,8 @@
                     Menunjukkan bukti vaksin melalui aplikasi Peduli Lindungi.<br>
                     Tidak ada batasan usia untuk berkunjung ke Taman Selecta.<br>
                     Semua wahana kembali beroperasi.<br>
-                    Anak usia 2 tahun ke atas sudah berlaku tiket masuk normal.</div>
+                    Anak usia 2 tahun ke atas sudah berlaku tiket masuk normal.
+                </div>
             </div>
 
         </section>
@@ -150,19 +152,19 @@
                 </div>
                 <div class="row">
                     <?php
-                    $query = mysqli_query($connect,"SELECT * From wahana");
-                    while($data = mysqli_fetch_array($query)){
+                    $query = mysqli_query($connect, "SELECT * From wahana");
+                    while ($data = mysqli_fetch_array($query)) {
                     ?>
-                    <div class="col-md">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/<?php echo $data['gambar']; ?>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-title"><?php echo $data['wahana_name']; ?></p>
+                        <div class="col-md">
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/<?php echo $data['gambar']; ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-title"><?php echo $data['wahana_name']; ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php
-                        }
+                    }
                     ?>
                 </div>
             </div>
