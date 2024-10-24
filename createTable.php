@@ -12,11 +12,17 @@
         echo "Koneksi ke MySQL gagal <br>" . mysqli_connect_error();
     }
 
-    $sql = "CREATE DATABASE dbwisata";
+    $sql = "CREATE TABLE wahana (
+            id INT PRIMARY KEY,
+            wahana_name VARCHAR(255) NOT NULL,
+            harga INT NOT NULL,
+            gambar VARCHAR(255) NOT NULL)";
+            
+
     if (mysqli_query($connect, $sql)) {
-        echo "Database berhasil dibuat";
+        echo "Tabel Wahana berhasil dibuat";
     } else {
-        echo "Database gagal dibuat <br>" . mysqli_error($connect);
+        echo "Tabel Wahana gagal dibuat <br>" . mysqli_error($connect);
     }
 
     mysqli_close($connect);

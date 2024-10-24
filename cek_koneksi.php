@@ -2,13 +2,8 @@
     $hostname = "localhost";
     $username = "root";
     $password = "";
+    $database = "dbwisata";
 
-    $connect = mysqli_connect($hostname, $username, $password);
+    $connect = mysqli_connect($hostname, $username, $password, $database);
 
-    if($connect){
-        echo "Koneksi ke MySQL berhasil";
-    }
-    else{
-        echo "Koneksi ke MySQL gagal". mysqli_connect_error();
-    }
 ?>
